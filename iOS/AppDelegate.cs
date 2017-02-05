@@ -19,6 +19,8 @@ namespace PC.iOS
       Xamarin.Calabash.Start();
 #endif
 
+      SlideOverKit.iOS.SlideOverKit.Init();
+
       LoadApplication(new App());
 
       return base.FinishedLaunching(app, options);

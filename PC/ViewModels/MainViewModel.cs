@@ -4,15 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using Prism.Commands;
+using Prism.Common;
 using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
 
 using Scandit.BarcodePicker.Unified;
+using Xamarin.Forms;
 
 namespace PC.ViewModels
 {
-  public class MainViewModel : BindableBase
+  public class MainViewModel : BindableBase, IPageAware
   {
     public MainViewModel(INavigationService navigationService, IPageDialogService pageDialogService)
     {
@@ -20,6 +22,7 @@ namespace PC.ViewModels
       _pageDialogService = pageDialogService;
 
       OnCommandScan = new DelegateCommand(CommandScan);
+      OnCommandSlideOverKit = new DelegateCommand(CommandSlideOverKit);
       ScanditService.BarcodePicker.DidScan += BarcodePickerOnDidScan;
     }
 
@@ -27,10 +30,12 @@ namespace PC.ViewModels
     private IPageDialogService _pageDialogService;
 
     public DelegateCommand OnCommandScan { get; private set; }
+    public DelegateCommand OnCommandSlideOverKit { get; private set; }
+
+    public Page Page { get; set; }
 
     private async void CommandScan()
     {
-      //_pageDialogService.DisplayAlertAsync("Click", "Teste", "Ok", "Cancel");
       await ScanditService.BarcodePicker.StartScanningAsync(false);
     }
 
@@ -40,6 +45,18 @@ namespace PC.ViewModels
       await ScanditService.BarcodePicker.StopScanningAsync();
 
       _pageDialogService.DisplayAlertAsync("Click", dado, "Ok", "Cancel");
+    }
+
+    private async void CommandSlideOverKit()
+    {
+      PC.Views.Main page = (PC.Views.Main)Page;
+      if (page.SlideMenu.IsShown)
+      {
+        page.HideMenuAction?.Invoke();
+      }
+      else {
+        page.ShowMenuAction?.Invoke();
+      }
     }
   }
 }
