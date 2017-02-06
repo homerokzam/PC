@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+  prism:ViewModelLocator.AutowireViewModel="True"
+  x:Class="PC.Views.CartaoView">
+  <ContentView.Content>
+
+  <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20, 20, 20, 20">
+    <Grid Padding="20, 0, 20, 0" BackgroundColor="{DynamicResource VerdeLimaoColor}">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="10*" />
+        <RowDefinition Height="5*" />
+        <RowDefinition Height="70*" />
+        <RowDefinition Height="10*" />
+        <RowDefinition Height="5*" />
+      </Grid.RowDefinitions>
+      <Label Grid.Row="1" Text=" " HorizontalOptions="Center" Style="{DynamicResource ParkCodeThin60Label}" />
+      <StackLayout Grid.Row="2" Orientation="Vertical" VerticalOptions="Fill">
+        <Label Text="Tempo utilizado:" HorizontalOptions="Center" Style="{DynamicResource ParkCodeThin60Label}" />
+        <Label Text="{Binding Tempo}" HorizontalOptions="Center" Style="{DynamicResource ParkCodeBold60Label}" />
+        <Label Text="Check-in feito às" HorizontalOptions="Center" Style="{DynamicResource ParkCodeLight30Label}" />
+        <Label Text="{Binding Inicio}" HorizontalOptions="Center" Style="{DynamicResource ParkCodeBold60Label}" />
+        <Label Text="{Binding DataInicio}" HorizontalOptions="Center" Style="{DynamicResource ParkCodeLight30Label}" />
+        <Label Text=" "/>
+        <Label Text="Timer" HorizontalOptions="Center" Style="{DynamicResource ParkCodeLight30Label}" />
+        <Label Text="{Binding Termino}" HorizontalOptions="Center" Style="{DynamicResource ParkCodeBold60Label}" />
+        <Label Text=" "/>
+        <Label Text="Valor atual" HorizontalOptions="Center" Style="{DynamicResource ParkCodeLight30Label}" />
+        <Label Text="{Binding ValorTotal}" HorizontalOptions="Center" Style="{DynamicResource ParkCodeBold60Label}" />
+        <Label Text=" " HorizontalOptions="Center" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Style="{DynamicResource ParkCodeLight30Label}" />
+        <Label Text="{Binding TextoCobranca}" HorizontalOptions="Center" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Style="{DynamicResource ParkCodeLight30Label}" />
+      </StackLayout>
+      <StackLayout Grid.Row="3" HorizontalOptions="Center">
+  			<Button Text="Fechar" Command="{Binding OnCommandClose}"></Button>
+      </StackLayout>          
+    </Grid>
+  </StackLayout>
+      
+  </ContentView.Content>
+</pages:PopupPage>

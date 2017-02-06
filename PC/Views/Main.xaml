@@ -8,6 +8,7 @@
 		<StackLayout>
       <Button Text="Scan" Command="{Binding OnCommandScan}" />
       <Button Text="SlideOverKit" Command="{Binding OnCommandSlideOverKit}" />
+      <Button Text="Rg.Plugins.Popup" Command="{Binding OnCommandRgPluginsPopup}" />
 		</StackLayout>
   </ContentPage.Content>
 </t:MenuContainerPage>

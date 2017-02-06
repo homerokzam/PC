@@ -3,6 +3,200 @@
   xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
 	x:Class="PC.App">
   <prism:PrismApplication.Resources>
-    <!-- Application resource dictionary -->
-  </prism:PrismApplication.Resources>
+
+    <ResourceDictionary>
+      
+      <!-- Export AccentColor -->
+      <Color x:Key="AccentColor">#ffe6e6e6</Color>
+      <!-- Export InverseTextColor -->
+      <Color x:Key="InverseTextColor">White</Color>
+
+      <!-- COLORS -->
+      <Color x:Key="BrandColor">#ad1457</Color>
+      <Color x:Key="BrandColorLight">#ec407a</Color>
+      <Color x:Key="BrandColorLighter">#f06292</Color>
+      <Color x:Key="BrandColorDark">#c2185b</Color>
+      <Color x:Key="BrandColorDarker">#ad1457</Color>
+
+      <!-- COMPLEMENT COLORS -->
+      <Color x:Key="ComplementColor">#384f63</Color>
+      <Color x:Key="ComplementColorDark">#272f36</Color>
+      <Color x:Key="ComplementColorDarker">#1f252a</Color>
+      <Color x:Key="TranslucidBlack">#44000000</Color>
+      <Color x:Key="TranslucidWhite">#22ffffff</Color>
+
+      <!-- INDICATOR COLORS -->
+      <Color x:Key="OkColor">#22c064</Color>
+      <Color x:Key="ErrorColor">Red</Color>
+      <Color x:Key="WarningColor">#ffc107</Color>
+
+
+      <Color x:Key="SecondaryColor">#54B9ED</Color>
+      <Color x:Key="FacebookColor">#3e549c</Color>
+      <Color x:Key="ComplentColor">#FF009966</Color>
+
+      <Color x:Key="SaveButtonColor">#22c064</Color>
+      <Color x:Key="DeleteButtonColor">#D50000</Color>
+
+      <Color x:Key="LabelButtonColor">#ffffff</Color>
+
+      <Color x:Key="PlaceholderColor">#22ffffff</Color>
+      <Color x:Key="PlaceholderColorEntry">#77FFFFFF</Color>
+      <Color x:Key="MainMenuBackgroundColor">#283441</Color>
+      <Color x:Key="MainMenuSeparatorColor">#253642</Color>
+      <Color x:Key="ListViewSeparatorColor">#77CCCCCC</Color>
+      <Color x:Key="LightBorderColor">#FFF</Color>
+
+      <Color x:Key="WalkthroughStepBackgroundColor1">#1CBCB4</Color>
+      <Color x:Key="WalkthroughStepIconColor1">#FFF</Color>
+
+      <Color x:Key="ArtinaEntryBorderBotomColor">#2C2F35</Color>
+
+      <Color x:Key="CategoryColor1">#FF0000</Color>
+      <Color x:Key="ListViewItemTextColor">#FF212121</Color>
+
+      <!-- STATIC IMAGES -->
+      <FileImageSource x:Key="HamburguerIcon" File="hamburguer_icon.png" />
+
+      <!--Homero-->
+      <!-- Export CinzaClaroColor -->
+      <Color x:Key="CinzaClaroColor">#e6e6e6</Color>
+      <!-- Export CinzaEscuroColor -->
+      <Color x:Key="CinzaEscuroColor">#4d4d4d</Color>
+      <!-- Export VerdeLimaoColor -->
+      <Color x:Key="VerdeLimaoColor">#aeef0f</Color>
+      <!-- Export VermelhoColor -->
+      <Color x:Key="VermelhoColor">#ff575c</Color>
+      <!-- Export RoxoColor -->
+      <Color x:Key="RoxoColor">#5c0870</Color>
+      <!-- Export AzulColor -->
+      <Color x:Key="AzulColor">#0444ff</Color>
+      <!-- Export CinzaIndermediarioColor -->
+      <Color x:Key="CinzaIndermediarioColor">#cccccc</Color>
+      <!-- Export BrancoColor -->
+      <Color x:Key="BrancoColor">#ffffff</Color>
+
+      <FileImageSource x:Key="ParkCodeBrandImage" File="park_code_logo_icon.png" />
+
+      <x:Double x:Key="ParkCodeMainMenuLabelFontsize">18</x:Double>
+      <x:Double x:Key="ParkCodeMainMenuIconFontsize">20</x:Double>
+
+      <x:Double x:Key="BaseFontSize">16</x:Double>
+      <x:Double x:Key="BaseButtonHeight">44</x:Double>
+      <x:Double x:Key="BaseButtonWidth">120</x:Double>
+      
+      <Style x:Key="RoundedButtonStyle" TargetType="Button">
+        <Setter Property="FontSize" Value="{StaticResource BaseFontSize}" />
+        <Setter Property="BorderRadius" Value="22" />
+        <Setter Property="HeightRequest" Value="{StaticResource BaseButtonHeight}"/>
+      </Style>
+      
+      <Style x:Key="ParkCodeThin30Label" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontFamily" Value="HelveticaNeue-Thin"/>
+        <Setter Property="TextColor" Value="{StaticResource CinzaEscuroColor}" />
+      </Style>
+      
+      <Style x:Key="ParkCodeThin46Label" TargetType="Label" BasedOn="{StaticResource ParkCodeThin30Label}">
+        <Setter Property="FontSize" Value="18" />
+      </Style>
+
+    <Style x:Key="ParkCodeThin24Label" TargetType="Label" BasedOn="{StaticResource ParkCodeThin30Label}">
+        <Setter Property="FontSize" Value="24" />
+      </Style>
+      
+      <Style x:Key="ParkCodeThin60Label" TargetType="Label" BasedOn="{StaticResource ParkCodeThin30Label}">
+        <Setter Property="FontSize" Value="30" />
+      </Style>
+
+      <Style x:Key="ParkCodeLight30Label" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontFamily" Value="HelveticaNeue-Light"/>
+        <Setter Property="TextColor" Value="{StaticResource CinzaEscuroColor}" />
+      </Style>
+      
+      <Style x:Key="ParkCodeLight34Label" TargetType="Label" BasedOn="{StaticResource ParkCodeLight30Label}">
+        <Setter Property="FontSize" Value="13" />
+      </Style>
+
+      <Style x:Key="ParkCodeLight46Label" TargetType="Label" BasedOn="{StaticResource ParkCodeLight30Label}">
+        <Setter Property="FontSize" Value="18" />
+      </Style>
+
+      <Style x:Key="ParkCodeLight60Label" TargetType="Label" BasedOn="{StaticResource ParkCodeLight30Label}">
+        <Setter Property="FontSize" Value="30" />
+      </Style>
+      
+      <Style x:Key="ParkCodeBold46Label" TargetType="Label">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontFamily" Value="HelveticaNeue-Bold"/>
+        <Setter Property="TextColor" Value="{StaticResource CinzaEscuroColor}" />
+      </Style>
+      
+      <Style x:Key="ParkCodeBold60Label" TargetType="Label" BasedOn="{StaticResource ParkCodeBold46Label}">
+        <Setter Property="FontSize" Value="30" />
+      </Style>
+            
+      <Style x:Key="LiberacaoEmailLabelStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontFamily" Value="HelveticaNeue-Thin"/>
+        <Setter Property="TextColor" Value="{StaticResource CinzaEscuroColor}" />
+      </Style>
+      
+      <Style x:Key="NotaFiscalLabelStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontFamily" Value="HelveticaNeue-Thin"/>
+        <Setter Property="TextColor" Value="{StaticResource CinzaEscuroColor}" />
+      </Style>
+      
+      <Style x:Key="ParkCodeEntryStyle" TargetType="Entry">
+        <!--<Setter Property="PlaceholderColor" Value="{StaticResource CinzaEscuroColor}"/>-->
+        <Setter Property="HeightRequest" Value="40" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+      </Style>
+
+      <Style x:Key="ParkCodeBigLight30Button" TargetType="Button">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontFamily" Value="HelveticaNeue-Light"/>
+      </Style>
+      
+      <Style x:Key="CheckInButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundedButtonStyle}">
+        <Setter Property="BackgroundColor" Value="#aeef0f"/>
+        <Setter Property="TextColor" Value="{StaticResource CinzaEscuroColor}"/>
+        <Setter Property="HeightRequest" Value="{StaticResource BaseButtonHeight}"/>
+        <Setter Property="WidthRequest" Value="{StaticResource BaseButtonWidth}"/>
+      </Style>
+
+      <Style x:Key="CheckOutButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundedButtonStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource VermelhoColor}"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="HeightRequest" Value="{StaticResource BaseButtonHeight}"/>
+        <Setter Property="WidthRequest" Value="{StaticResource BaseButtonWidth}"/>
+      </Style>
+      
+      <Style x:Key="ResumoButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundedButtonStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource CinzaEscuroColor}"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="HeightRequest" Value="{StaticResource BaseButtonHeight}"/>
+        <Setter Property="WidthRequest" Value="{StaticResource BaseButtonWidth}"/>
+      </Style>
+
+      <Style x:Key="CancelarButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundedButtonStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource CinzaIndermediarioColor}"/>
+        <Setter Property="TextColor" Value="{StaticResource CinzaEscuroColor}"/>
+        <Setter Property="HeightRequest" Value="{StaticResource BaseButtonHeight}"/>
+        <Setter Property="WidthRequest" Value="{StaticResource BaseButtonWidth}"/>
+      </Style>
+
+      <Style x:Key="ParkCodeIconStyle" TargetType="Label" >
+        <Setter Property="TextColor" Value="{StaticResource VerdeLimaoColor}"/>
+        <Setter Property="FontSize" Value="{StaticResource ParkCodeMainMenuIconFontsize}"/>
+        <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+      </Style>
+
+    </ResourceDictionary>
+
+	</prism:PrismApplication.Resources>
 </prism:PrismApplication >
